@@ -52,7 +52,7 @@ def register():
         db.session.add(cat)
         db.session.commit()
         return redirect(url_for('home'))
-    return render_template('register.html', form=form, googlemaps_key=os.getenv('GOOGLEMAPS_KEY'))
+    return render_template('register.html', form=form)
 
 if __name__ == '__main__':
     app.run(debug=True)
