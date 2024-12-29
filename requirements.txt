@@ -3,7 +3,7 @@ blinker==1.9.0
 certifi==2024.12.14
 charset-normalizer==3.4.1
 click==8.1.8
-Flask==2.0.2
+Flask==2.2.5
 flask-googlemaps==0.4.1
 Flask-Migrate==4.0.7
 Flask-SQLAlchemy==3.1.1
