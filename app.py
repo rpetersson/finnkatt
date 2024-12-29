@@ -5,6 +5,11 @@ from flask_migrate import Migrate
 from flask_googlemaps import GoogleMaps, Map
 from forms import RegisterCatForm
 from dotenv import load_dotenv
+import os
+import httpx
+from clerk_backend_api import Clerk
+from clerk_backend_api.jwks_helpers import AuthenticateRequestOptions
+
 
 # Load environment variables from .env file
 load_dotenv()
