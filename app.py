@@ -11,9 +11,10 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-# Ensure the data directory exists
-if not os.path.exists('data'):
-    os.makedirs('data')
+
+# Auth
+from functions.auth import is_signed_in
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
@@ -45,7 +46,8 @@ class Cat(db.Model):
 
 @app.route('/')
 def home():
-    return render_template('base.html', googlemaps_key=os.getenv('GOOGLEMAPS_KEY'))
+
+    return render_template('base.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
