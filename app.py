@@ -30,6 +30,7 @@ class Cat(db.Model):
     date_of_birth = db.Column(db.Date, nullable=False)
     breed = db.Column(db.String(100), nullable=False)
     address = db.Column(db.String(200), nullable=False)  # New column for address
+    owner_username = db.Column(db.String(100),)
 
     def to_dict(self):
         return {
