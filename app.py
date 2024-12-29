@@ -1,8 +1,13 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import date
 
 from forms import RegisterCatForm
+
+# Ensure the data directory exists
+if not os.path.exists('data'):
+    os.makedirs('data')
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'ASDKJ123123rADFA'
